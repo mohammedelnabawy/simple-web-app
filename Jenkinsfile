@@ -11,7 +11,7 @@ pipeline {
                     sh """ 
                     docker build . -t elnabawy/simple-web-app
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
-                    docker push elnabawy/simple-web-app
+                    docker push elnabawy/-web-app
                     """
                 }
             }
