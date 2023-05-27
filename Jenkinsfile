@@ -7,7 +7,7 @@ pipeline {
         
         stage('ci') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'doker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
                     sh """ 
                     docker build . -t elnabawy/simple-web-app
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
