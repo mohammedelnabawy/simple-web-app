@@ -9,9 +9,9 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
                     sh """ 
-                    docker build . -t elnabawy/jenkins-bake-app
+                    docker build . -t elnabawy/simple-web-app
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
-                    docker push elnabawy/jenkins-bake-app
+                    docker push elnabawy/simple-web-app
                     """
                 }
             }
