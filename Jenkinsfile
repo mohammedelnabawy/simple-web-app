@@ -9,7 +9,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
                     sh """ 
-                    docer build . -t elnabawy/simple-web-app
+                    docker build . -t elnabawy/simple-web-app
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                     docker push elnabawy/simple-web-app
                     """
