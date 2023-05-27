@@ -1,0 +1,172 @@
+body{
+    background-image: url("./images/background.jpg");
+}
+
+#div1{
+    background-color: black;
+    width: 300;
+    height: 331px;
+    margin: auto;
+    margin-top: 200px;
+
+}
+
+.label1{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+input{
+    margin-bottom: 15px;
+    padding: 3px;
+    width: 193px;
+}
+
+#caption1{
+    color: white;
+}
+
+#form1{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+a{
+    color: white;
+}
+#login{
+    margin-left: 40px;
+    background-color: red;
+    color: white;
+    width: 105px;
+}
+
+#div2{
+    background-color: black;
+    width: 95%;
+    height: 50px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    overflow: hidden;
+    direction: rtl;
+    gap: 10px;
+    /* background-color: #333333; */
+  }
+
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    /* padding-left: 135px; */
+    margin-left:125px;
+    text-decoration: none;
+  }
+
+  button{
+    width: 87px;
+    height: auto;
+    padding:3px 10px;
+    color: white;
+    background: red;
+    border-radius: 15px;
+  }
+
+  #dropdown-content{
+    background-color: black;
+    width: 100px;
+    height: 176px;
+    /* margin: auto; */
+    margin-right: -20px;
+    margin-top: 10px;
+    display:none;
+}
+
+#dropdown-content ul li{
+    width: 50px;
+}
+
+#dropdown-content ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    /* padding: 6px; */
+    /* padding-left: 17px; */
+    padding-right: 0px;
+    padding-top: 13px;
+    text-decoration: none;
+    display: block;
+    width: 43px;
+}
+
+/* #contact>a
+{
+    padding: 10px;
+} */
+
+
+ #div2 #contact:hover #dropdown-content {display: block;}
+ #div2 a:hover {
+    background-color: red;
+    /* width: 35px; */
+    /* border: none;
+    padding: 10;
+    margin-top: 5px; */
+
+}
+#div2 .li-no-hover:hover {
+    background-color: transparent;
+}
+ #dropdown-content a:hover {background-color:red;}
+
+
+
+ .bllock_one{
+    background-color: black;
+    width: 345px;
+    height: 331px;
+   
+    margin-top: 191px;
+    margin-left: 115px;
+    float: left;
+   
+}
+
+/* #bllock_two{
+    background-color: black;
+    width: 345px;
+    height: 331px;
+    
+    margin-top: 191px;
+    margin-left: 160px;
+    float: left;
+}
+
+#bllock_three{
+    background-color: black;
+    width: 345px;
+    height: 331px;
+    
+    margin-top: 191px;
+    margin-left: 160px;
+    float: left;
+} */
+
+.bllock_one p{
+    color: white;
+    text-align: center;
+}
+
+.bllock_one img{
+    width: 150px;
+    height: 271px;
+    margin-left: 14px;;
+}
