@@ -21,9 +21,9 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
                     sh """
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
-                    kubectl apply -f bake-namespace.yaml
-                    kubectl apply -f bake-deploy.yaml
-                    kubectl apply -f bake-svc.yaml
+                    kubectl apply -f namespace.yaml
+                    kubectl apply -f deploy.yaml
+                    kubectl apply -f svc.yaml
                     """
                 }
             }
