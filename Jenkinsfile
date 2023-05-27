@@ -22,7 +22,7 @@ pipeline {
                     sh """
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                     kubectl apply -f namespace.yaml
-                    kubectl apply -f deploy.yaml
+                    kubectl apply -f deployment.yaml
                     kubectl apply -f svc.yaml
                     """
                 }
