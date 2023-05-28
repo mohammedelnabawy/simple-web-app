@@ -9,7 +9,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
                     sh """ 
-                    docker build . -t elnabawy/simple-web-app
+                    docer build . -t elnabawy/simple-web-app
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                     docker push elnabawy/simple-web-app
                     """
@@ -18,14 +18,14 @@ pipeline {
         }
         stage('cd') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
+               
                     sh """
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                     kubectl apply -f namespace.yaml
                     kubectl apply -f deployment.yaml
                     kubectl apply -f svc.yaml
                     """
-                }
+                
             }
         }
     }
