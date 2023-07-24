@@ -16,7 +16,7 @@ stages:
           - task: Docker@2
             inputs:
               containerRegistry: 'docker_repo'
-              repository: 'azure_docker_repo'
+              repository: 'docker.io'
               command: 'buildAndPush'
               Dockerfile: '**/Dockerfile'
               tags: $(Build.BuildId)
