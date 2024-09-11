@@ -19,7 +19,7 @@ pipeline {
                     sh """
                     docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                     docker pull elnabawy/simple-web-app
-                    docker build . web-app
+                    docker run elnabawy/simple-web-app
                     """
                 }
             }
