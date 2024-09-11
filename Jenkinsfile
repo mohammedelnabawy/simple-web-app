@@ -13,5 +13,16 @@ pipeline {
                 }
             }
         }
+        stage('cd') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
+                    sh """
+                    docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
+                    docker pull elnabawy/simple-web-app
+                    docker build . web-app
+                    """
+                }
+            }
+        }
     }
 }
