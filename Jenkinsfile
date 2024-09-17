@@ -1,5 +1,8 @@
 pipeline {
-    agent 'any'
+    agent {
+        label 'aws'
+    }
+
     stages {
         
         stage('ci') {
