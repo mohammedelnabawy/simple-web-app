@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'aws'
+    }
 
     stages {
         
@@ -17,7 +19,8 @@ pipeline {
         stage('cd') {
             steps {
                 sh """
-                docker run -d -p 8081:80 elnabawy/simple-web-app
+                docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
+                docker run -d -p 8089:80 elnabawy/simple-web-app
                 """
             }
         }
