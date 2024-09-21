@@ -16,12 +16,10 @@ pipeline {
         }
         stage('cd') {
             steps {
-               withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKERPASS', usernameVariable: 'DOCKERENAME')]) {
-                    sh """
-                    docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
-                    docker run -d -p 8089:80 elnabawy/simple-web-app
-                    """
-               }
+                sh """
+                docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
+                docker run -d -p 8089:80 elnabawy/simple-web-app
+                """
             }
         }
     }
