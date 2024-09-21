@@ -17,7 +17,6 @@ pipeline {
         stage('cd') {
             steps {
                 sh """
-                docker login -u ${DOCKERENAME} -p ${DOCKERPASS}
                 docker run -d -p 8089:80 elnabawy/simple-web-app
                 """
             }
