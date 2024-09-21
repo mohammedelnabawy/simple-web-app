@@ -17,7 +17,7 @@ pipeline {
         stage('cd') {
             steps {
                 sh """
-                docker run -d -p 8089:80 elnabawy/simple-web-app
+                docker run -d -p 8081:80 elnabawy/simple-web-app
                 """
             }
         }
